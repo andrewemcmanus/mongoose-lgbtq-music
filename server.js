@@ -3,11 +3,8 @@ const app = express();
 require('dotenv').config()
 const mongoose = require('mongoose');
 const Music = require('./models/Music.js');
-// mongoose.connect(`mongodb://127.0.0.1:27017`);
-// mongoose.connect(process.env.MONGO_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-//   })
+
+// uses MONGO_URI in models/index.js
 mongoose.connect(`mongodb://localhost/mongooseLgbtqMusic`);
 const db = mongoose.connection;
 
@@ -29,9 +26,9 @@ app.get('/', (req, res) => {
   res.send('Hello from root');
 })
 
-app.get('/', (req, res) => {
-  res.send('Home Route, Backend');
-})
+// app.get('/', (req, res) => {
+//   res.send('Home Route, Backend');
+// })
 
 app.get('/loadmusic', (req, res) => {
 
