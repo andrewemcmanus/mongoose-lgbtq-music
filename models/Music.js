@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 const descriptionSchema = new mongoose.Schema({
   username: String,
-  description: String
+  description: {
+    type: String,
+    maxlength: 100
+  }
 })
-
+// how to create a more flexible structure for exact instrumetation:
 const instrumentSchema = new mongoose.Schema({
   instrument1: String,
   instrument2: String,
