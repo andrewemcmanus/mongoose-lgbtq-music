@@ -1,2 +1,2 @@
 # mongoose-lgbtq-music
-An API featuring LGBTQ artists
+A current and historical API featuring LGBTQ artists and composers 
